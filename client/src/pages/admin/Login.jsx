@@ -23,7 +23,6 @@ const Login = () => {
                                     </div>
                                     <div className="mb-3 d-flex justify-content-between">
                                         <input type="submit" className='btn btn-primary' />
-                                        <Link to={`/register`} className='btn btn-success'>Register</Link>
                                     </div>
                                 </form>
 

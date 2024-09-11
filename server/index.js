@@ -4,7 +4,11 @@ const port = 8000;
 
 const app = express();
 
-const db = require('./config/db');
+const {connectDb} = require('./config/db'); 
+connectDb();
+
+
+
 
 app.use('/', require('./routes/indexRoute'));
 

@@ -1,15 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-mongoose.connect(`mongodb://localhost/schoolmanagement`);
+const connectDb = async () => {
+  try{
+    const con = await mongoose.connect(`mongodb+srv://milans:1234@cluster0.twrqg.mongodb.net/schoolmanagement`);
+    console.log(`Connect Mongodb ${con.connection.host}`);
+  } catch(err){
+    console.log(`Error in Mongodb ${err}`);
+  } 
+}
 
-const db = mongoose.connection;
-
-db.on("connected",(err)=>{
-    if(err){
-        console.log(err);
-        return false;
-    }
-    console.log(`db connected`);
-})
-
-module.exports = db;
+module.exports = {
+    connectDb
+}
