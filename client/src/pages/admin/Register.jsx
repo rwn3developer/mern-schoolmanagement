@@ -131,7 +131,7 @@ const Register = () => {
                                             </select>
                                         </div>
                                         <div className="mb-3">
-                                            <label htmlFor="exampleFormControlInput1" className="form-label">Nationality*</label>
+                                            <label htmlFor="exampleFormControlInput1" className="form-label">Address*</label>
                                             <input type="text" className="form-control"/>
                                         </div>
                                     </div>

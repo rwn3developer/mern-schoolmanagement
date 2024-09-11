@@ -5,10 +5,10 @@ const port = 8000;
 const app = express();
 
 const {connectDb} = require('./config/db'); 
+
 connectDb();
 
-
-
+app.use(express.urlencoded());
 
 app.use('/', require('./routes/indexRoute'));
 
